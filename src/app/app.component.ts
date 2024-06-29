@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { PopupComponent } from './popup/popup.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'customer-app';
+  constructor(private dialog: MatDialog) {}
+
+  openPopup() {
+    this.dialog.open(PopupComponent);
+  }
 }
