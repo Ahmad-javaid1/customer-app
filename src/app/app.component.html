@@ -1,92 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Angular App</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #007bff;
-      color: white;
-      padding: 10px;
-      text-align: center;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #343a40;
-      padding: 10px 0;
-    }
-    nav button {
-      background-color: #007bff;
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      margin: 0 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    nav button:hover {
-      background-color: #0056b3;
-    }
-    main {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    main h1 {
-      color: #343a40;
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    @media (min-width: 768px) {
-      nav {
-        justify-content: space-between;
-      }
-    }
-  </style>
-</head>
-<body>
-  
-  <nav>
-    <button type="button" routerLink="/">Home</button>
-    <button type="button" routerLink="/dashboard">Dashboard</button>
-    <button type="button" routerLink="/customers">Customers</button>
-    <button type="button" routerLink="/orders">Orders</button>
-    <button type="button" routerLink="/reports">Reports</button>
-    <button type="button" routerLink="/about">About</button>
-    <button type="button" routerLink="/contact">Contact</button>
-  </nav>
-  <nav>
-    <a routerLink="/parent" routerLinkActive="active">Parent</a> |
-    <a routerLink="/sibling1" routerLinkActive="active">Sibling1</a> |
-    <a routerLink="/sibling2" routerLinkActive="active">Sibling2</a> |
-    <a routerLink="/dislocated1" routerLinkActive="active">Dislocated1</a> |
-    <a routerLink="/dislocated2" routerLinkActive="active">Dislocated2</a>
-  </nav>
-  <div>
-    <h2>Dynamic Popup Component</h2>
-    <button (click)="openPopup()">Open Popup</button>
-  </div>
-  <main>
-    <div class="container">
-      <router-outlet></router-outlet>
-      <employee-list></employee-list>
-      <employee-detail></employee-detail>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <nav>
+      <button mat-button routerLink="/">Home</button>
+      <button mat-button routerLink="/dashboard">Dashboard</button>
+      <button mat-button routerLink="/customers">Customers</button>
+      <button mat-button routerLink="/orders">Orders</button>
+      <button mat-button routerLink="/reports">Reports</button>
+      <button mat-button routerLink="/about">About</button>
+      <button mat-button routerLink="/contact">Contact</button>
+    </nav>
+    <span class="spacer"></span>
+    <div class="auth-buttons">
+      <button mat-raised-button color="accent" *ngIf="!isLoggedIn()" (click)="login()">Login</button>
+      <button mat-raised-button color="warn" *ngIf="isLoggedIn()" (click)="logout()">Logout</button>
     </div>
-  </main>
-</body>
-</html>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<!-- Display ItemListComponent only when logged in -->
+<div class="main-content">
+  <div class="item-list-container" *ngIf="isLoggedIn()">
+    <nav class="sub-navigation">
+      <a mat-button routerLink="/parent" routerLinkActive="active">Parent</a>
+      <a mat-button routerLink="/sibling1" routerLinkActive="active">Sibling1</a>
+      <a mat-button routerLink="/sibling2" routerLinkActive="active">Sibling2</a>
+      <a mat-button routerLink="/dislocated1" routerLinkActive="active">Dislocated1</a>
+      <a mat-button routerLink="/dislocated2" routerLinkActive="active">Dislocated2</a>
+    </nav>
+    <app-item-list></app-item-list>
+    <div class="popup-button">
+      <h2>Dynamic Popup Component</h2>
+      <button mat-button color="primary" (click)="openPopup()">Open Popup</button>
+    </div>
+    <main>
+      <div class="container">
+        <router-outlet></router-outlet>
+        <employee-list></employee-list>
+        <employee-detail></employee-detail>
+      </div>
+    </main>
+  </div>
+</div>

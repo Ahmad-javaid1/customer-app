@@ -1,0 +1,10 @@
+<div class="item-container" *ngFor="let item of items">
+  <div class="item">
+    <p>{{ item.name }}</p>
+    <div class="button-container">
+      <button class="update-button" (click)="updateItem({ id: item.id, name: 'Updated Name' })">Update</button>
+      <button class="delete-button" (click)="deleteItem(item.id)">Delete</button>
+      <button class="add-button" (click)="addItem(item.id)">Add</button>
+    </div>
+  </div>
+</div>
