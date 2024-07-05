@@ -1,0 +1,108 @@
+.parent-component-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the elements horizontally */
+  justify-content: center; /* Center the elements vertically */
+  height: 100vh; /* Full viewport height to ensure centering on the page */
+  text-align: center; /* Center-align the text within each element */
+  padding: 20px;
+}
+
+.centered-heading {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px; /* Space between heading and child component */
+}
+
+.centered-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #555;
+  margin-top: 20px; /* Space between received data and button */
+}
+
+.button-container {
+  margin-top: 20px; /* Space between received data and button */
+}
+
+.center-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.center-button:hover {
+  transform: scale(1.05);
+}
+/* styles.css or your component's CSS file */
+.mat-toolbar-row {
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-right: 10px;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.sub-navigation {
+  margin-bottom: 10px;
+}
+
+.popup-button {
+  margin-bottom: 30px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.item-list-heading {
+  font-family: 'Arial', sans-serif; /* Change font family */
+  font-size: 24px; /* Change font size */
+  font-weight: bold; /* Change font weight */
+  color: #333; /* Change font color */
+  margin-top: 20px; /* Adjust top margin */
+  margin-bottom: 10px; /* Adjust bottom margin */
+  text-align: center; /* Center align the heading */
+}
+/* Adjust grid and spacing as needed */
+.button-container {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  align-items: center; /* Center the button vertically if needed */
+  /* height: 100vh; Full viewport height to ensure centering on the page */
+}
+
+.center-button {
+  padding: 10px 20px; /* Add padding to the button */
+  font-size: 16px; /* Increase font size for better visibility */
+  border-radius: 8px; /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.2s ease-in-out; /* Add a smooth transition effect */
+}
+
+.center-button:hover {
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}

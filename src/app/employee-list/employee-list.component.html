@@ -1,1 +1,7 @@
-<p>employee-list works!</p>
+<div class="employee-list-container">
+    <h2 class="centered-heading">Employee List</h2>
+    <ul class="employee-list" *ngFor="let employee of employees">
+      <li>{{employee.name}}</li>
+    </ul>
+  </div>
+  

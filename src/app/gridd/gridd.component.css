@@ -1,0 +1,11 @@
+/* Example styles, adjust as needed */
+.ag-theme-quartz {
+    width: 100%;
+    height: 100%;
+  }
+.rag-red {
+    background-color: #cc222244;
+}
+.rag-green {
+    background-color: #33cc3344;
+}

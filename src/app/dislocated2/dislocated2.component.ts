@@ -3,10 +3,8 @@ import { CommunicationService } from '../communication.service';
 
 @Component({
   selector: 'app-dislocated2',
-  template: `
-    <h3>Dislocated2 Component</h3>
-    <p>{{message}}</p>
-  `
+  templateUrl: './dislocated2.component.html',
+  styleUrls: ['./dislocated2.component.css'],
 })
 export class Dislocated2Component implements OnInit {
   message: string='';

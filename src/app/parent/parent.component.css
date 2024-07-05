@@ -1,0 +1,41 @@
+.parent-component-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the elements horizontally */
+    justify-content: center; /* Center the elements vertically */
+    /* height: 100vh;  */
+    text-align: center; /* Center-align the text within each element */
+    padding: 20px;
+  }
+  
+  .centered-heading {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px; /* Space between heading and child component */
+  }
+  
+  .centered-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #555;
+    margin-top: 20px; /* Space between received data and button */
+  }
+  
+  .button-container {
+    margin-top: 20px; /* Space between received data and button */
+  }
+  
+  .center-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .center-button:hover {
+    transform: scale(1.05);
+  }
+  

@@ -56,13 +56,14 @@ import { Sibling1Component } from './sibling1/sibling1.component';
 import { Sibling2Component } from './sibling2/sibling2.component';
 import { Dislocated1Component } from './dislocated1/dislocated1.component';
 import { Dislocated2Component } from './dislocated2/dislocated2.component';
-
+import { GriddComponent } from './gridd/gridd.component';
 export const routes: Routes = [
   { path: 'parent', component: ParentComponent },
   { path: 'sibling1', component: Sibling1Component },
   { path: 'sibling2', component: Sibling2Component },
   { path: 'dislocated1', component: Dislocated1Component },
   { path: 'dislocated2', component: Dislocated2Component },
+  { path: 'Grid', component: GriddComponent},
   { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
   { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule), canActivate: [AuthService] },
   { path: 'edit', loadChildren: () => import('./edit/edit.module').then(m => m.EditModule), canDeactivate: [CanDeactivateGuard] },

@@ -1,14 +1,5 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <nav>
-      <button mat-button routerLink="/">Home</button>
-      <button mat-button routerLink="/dashboard">Dashboard</button>
-      <button mat-button routerLink="/customers">Customers</button>
-      <button mat-button routerLink="/orders">Orders</button>
-      <button mat-button routerLink="/reports">Reports</button>
-      <button mat-button routerLink="/about">About</button>
-      <button mat-button routerLink="/contact">Contact</button>
-    </nav>
     <span class="spacer"></span>
     <div class="auth-buttons">
       <button mat-raised-button color="accent" *ngIf="!isLoggedIn()" (click)="login()">Login</button>
@@ -20,21 +11,46 @@
 <!-- Display ItemListComponent only when logged in -->
 <div class="main-content">
   <div class="item-list-container" *ngIf="isLoggedIn()">
-    <nav class="sub-navigation">
-      <a mat-button routerLink="/parent" routerLinkActive="active">Parent</a>
-      <a mat-button routerLink="/sibling1" routerLinkActive="active">Sibling1</a>
-      <a mat-button routerLink="/sibling2" routerLinkActive="active">Sibling2</a>
-      <a mat-button routerLink="/dislocated1" routerLinkActive="active">Dislocated1</a>
-      <a mat-button routerLink="/dislocated2" routerLinkActive="active">Dislocated2</a>
-    </nav>
-    <app-item-list></app-item-list>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        
+        <nav>
+          <button mat-button routerLink="/">Home</button>
+          <button mat-button routerLink="/dashboard">Dashboard</button>
+          <button mat-button routerLink="/customers">Customers</button>
+          <button mat-button routerLink="/orders">Orders</button>
+          <button mat-button routerLink="/reports">Reports</button>
+          <button mat-button routerLink="/about">About</button>
+          <button mat-button routerLink="/contact">Contact</button>
+        </nav>
+     </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <nav class="sub-navigation">
+          <a mat-button routerLink="/parent" routerLinkActive="active">Parent</a>
+          <a mat-button routerLink="/sibling1" routerLinkActive="active">Sibling1</a>
+          <a mat-button routerLink="/sibling2" routerLinkActive="active">Sibling2</a>
+          <a mat-button routerLink="/dislocated1" routerLinkActive="active">Dislocated1</a>
+          <a mat-button routerLink="/dislocated2" routerLinkActive="active">Dislocated2</a>
+          <a mat-button routerLink="/Grid" routerLinkActive="active">Grid</a>
+        </nav>
+     </mat-toolbar-row>
+    </mat-toolbar>
+    <h2 class="item-list-heading">Items List (using mockoon)</h2>
+      <app-item-list></app-item-list>
     <div class="popup-button">
-      <h2>Dynamic Popup Component</h2>
-      <button mat-button color="primary" (click)="openPopup()">Open Popup</button>
+      <h2 class="item-list-heading">Dynamic Popup</h2>
+      <div class="button-container">
+        <button mat-raised-button color="primary" class="center-button" (click)="openPopup()">Open Popup</button>
+      </div>
     </div>
+    <!-- <h2 class="item-list-heading">Sending data using Service and event emitters</h2> -->
+    <router-outlet></router-outlet>
+    <h2 class="item-list-heading">Sending data using Service and event emitters:</h2>
     <main>
       <div class="container">
-        <router-outlet></router-outlet>
+        
         <employee-list></employee-list>
         <employee-detail></employee-detail>
       </div>

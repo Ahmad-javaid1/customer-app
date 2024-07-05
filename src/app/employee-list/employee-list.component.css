@@ -1,0 +1,25 @@
+.employee-list-container {
+  text-align: center; /* Center-align content */
+}
+
+.centered-heading {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px; /* Space between heading and list */
+}
+
+.employee-list {
+  list-style-type: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+  margin: 0 auto; /* Center the list horizontally */
+  max-width: 400px; /* Optional: Limit the width of the list */
+}
+
+.employee-list li {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px; /* Space between list items */
+}

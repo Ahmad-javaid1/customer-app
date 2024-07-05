@@ -1,3 +1,6 @@
-<h2>Parent Component</h2>
-<app-child [childData]="parentData" (childEvent)="receiveChildEvent($event)"></app-child>
-<p>Received from Child: {{receivedData}}</p>
+<div class="parent-component-container">
+  <app-child [childData]="parentData" (childEvent)="receiveChildEvent($event)"></app-child>
+  <div class="centered-heading">
+    <p class="centered-text">Received from Child: {{receivedData}}</p>
+  </div> 
+</div>

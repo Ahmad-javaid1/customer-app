@@ -1,3 +1,10 @@
-<h3>Child Component</h3>
+<!-- <h3>Child Component</h3>
 <p>{{childData}}</p>
-<button (click)="sendToParent()">Send Data to Parent</button>
+<button (click)="sendToParent()">Send Data to Parent</button> -->
+<div class="parent-component-container">
+    <h2 class="item-list-heading">Parent/Child Communication</h2>
+    <p>{{childData}}</p>
+    <div class="button-container">
+        <button mat-raised-button color="primary" class="center-button" (click)="sendToParent()">Send Data to Parent</button>
+    </div>
+</div>

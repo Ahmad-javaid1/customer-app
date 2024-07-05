@@ -3,10 +3,8 @@ import { CommunicationService } from '../communication.service';
 
 @Component({
   selector: 'app-sibling2',
-  template: `
-    <h3>Sibling2 Component</h3>
-    <p>{{message}}</p>
-  `
+  templateUrl: './sibling2.component.html',
+  styleUrls: ['./sibling2.component.css'],
 })
 export class Sibling2Component implements OnInit {
   message: string='';

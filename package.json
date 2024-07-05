@@ -10,6 +10,13 @@
   },
   "private": true,
   "dependencies": {
+    "@ag-grid-community/angular": "^32.0.0",
+    "@ag-grid-community/client-side-row-model": "^32.0.0",
+    "@ag-grid-community/core": "^32.0.0",
+    "@ag-grid-community/infinite-row-model": "^32.0.0",
+    "@ag-grid-community/styles": "^32.0.0",
+    "@ag-grid-enterprise/excel-export": "^32.0.0",
+    "@ag-grid-enterprise/server-side-row-model": "^32.0.0",
     "@angular/animations": "^18.0.0",
     "@angular/cdk": "^18.0.5",
     "@angular/common": "^18.0.0",
@@ -20,6 +27,9 @@
     "@angular/platform-browser": "^18.0.0",
     "@angular/platform-browser-dynamic": "^18.0.0",
     "@angular/router": "^18.0.0",
+    "ag-grid-angular": "^32.0.0",
+    "ag-grid-community": "^32.0.0",
+    "ag-grid-enterprise": "^32.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

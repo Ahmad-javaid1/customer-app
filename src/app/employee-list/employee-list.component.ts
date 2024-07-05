@@ -3,13 +3,8 @@ import { EmployeeService } from './../employee.service';
 
 @Component({
   selector: 'employee-list',
-  template: `
-    <h2>Employee List</h2>
-    <ul *ngFor="let employee of employees">
-      <li>{{employee.name}}</li>
-    </ul>
-  `,
-  styles: []
+  templateUrl: './employee-list.component.html',
+  styleUrls: ['./employee-list.component.css'],
 })
 export class EmployeeListComponent implements OnInit {
 

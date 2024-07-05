@@ -100,6 +100,12 @@ import { AuthService } from './guards/auth.service';
 import { CanDeactivateGuard } from './guards/can-deactivate.service';
 import { ItemListComponent } from './item-list/item-list.component';
 
+import { ExcelExportModule } from '@ag-grid-enterprise/excel-export';
+import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
+import { InfiniteRowModelModule } from '@ag-grid-community/infinite-row-model';
+import { ServerSideRowModelModule } from '@ag-grid-enterprise/server-side-row-model';
+import { GriddComponent } from './gridd/gridd.component';
+import { AgGridModule } from 'ag-grid-angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -113,16 +119,19 @@ import { ItemListComponent } from './item-list/item-list.component';
     Dislocated2Component,
     PopupComponent,
     ItemListComponent,
+    
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AgGridModule,
     HttpClientModule,
     MatSnackBarModule,
     MatButtonModule,
     MatListModule,
     MatIconModule,
     MatToolbarModule,
+    GriddComponent,
     FormsModule, // Add FormsModule if needed for template-driven forms
     AppRoutingModule // Make sure AppRoutingModule is imported
   ],

@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="columns">
+    <label class="option" for="selectedOnly"
+      ><input id="selectedOnly" type="checkbox" />Selected Rows Only</label
+    >
+    <div>
+      <button (click)="onBtExport()" style="font-weight: bold">
+        Export to Excel
+      </button>
+      <button (click)="selectAllRows()" style="font-weight: bold">Select All Rows</button>
+    </div>
+  </div>
+<div class="grid-wrapper">
+  <ag-grid-angular
+    style="width: 100%; height: 500px;"
+    class="ag-theme-quartz"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [suppressRowClickSelection]="true"
+    [rowSelection]="rowSelection"
+    [rowData]="rowData"
+    (gridReady)="onGridReady($event)"
+  ></ag-grid-angular>
+</div>
+</div>
+<!-- <app-grid></app-grid> -->
