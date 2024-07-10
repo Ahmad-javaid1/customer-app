@@ -99,35 +99,40 @@ import { ApiService } from './api.service'; // Import ApiService from api.ts
 import { AuthService } from './guards/auth.service';
 import { CanDeactivateGuard } from './guards/can-deactivate.service';
 import { ItemListComponent } from './item-list/item-list.component';
-
+import {MatBadgeModule} from '@angular/material/badge';
 import { ExcelExportModule } from '@ag-grid-enterprise/excel-export';
 import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
 import { InfiniteRowModelModule } from '@ag-grid-community/infinite-row-model';
 import { ServerSideRowModelModule } from '@ag-grid-enterprise/server-side-row-model';
 import { GriddComponent } from './gridd/gridd.component';
 import { AgGridModule } from 'ag-grid-angular';
+import { EditComponent } from './edit/edit.component';
+import { MatMenuModule } from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeListComponent,
     EmployeeDetailComponent,
     ParentComponent,
+    // EditComponent,
     ChildComponent,
     Sibling1Component,
     Sibling2Component,
     Dislocated1Component,
     Dislocated2Component,
     PopupComponent,
-    ItemListComponent,
+    //ItemListComponent,
     
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MatBadgeModule,
     AgGridModule,
     HttpClientModule,
     MatSnackBarModule,
     MatButtonModule,
+    MatMenuModule,
     MatListModule,
     MatIconModule,
     MatToolbarModule,

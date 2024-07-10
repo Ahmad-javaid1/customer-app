@@ -1,1 +1,14 @@
-<p>orders works!</p>
+
+<form class="example-form">
+    <input type="text"
+           placeholder="Search for your order"
+           [formControl]="control"
+           [matAutocomplete]="auto"
+           class="example-input">
+    <mat-autocomplete #auto="matAutocomplete">
+      @for (street of filteredStreets | async; track street) {
+        <mat-option [value]="street">{{street}}</mat-option>
+      }
+    </mat-autocomplete>
+  </form>
+  

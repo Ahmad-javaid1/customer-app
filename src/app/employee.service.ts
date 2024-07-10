@@ -14,4 +14,7 @@ export class EmployeeService {
       {"id": 523, "name": "Anarkali", "age": 25}    
     ];
   }
+  // getEmployeeById(id: number) {
+  //   return this.getEmployees().find(employee => employee.id === id);
+  // }
 }

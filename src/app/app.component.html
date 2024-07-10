@@ -15,45 +15,37 @@
       <mat-toolbar-row>
         
         <nav>
-          <button mat-button routerLink="/">Home</button>
-          <button mat-button routerLink="/dashboard">Dashboard</button>
-          <button mat-button routerLink="/customers">Customers</button>
-          <button mat-button routerLink="/orders">Orders</button>
-          <button mat-button routerLink="/reports">Reports</button>
-          <button mat-button routerLink="/about">About</button>
-          <button mat-button routerLink="/contact">Contact</button>
+          <button mat-button routerLink="/">
+            <mat-icon matBadge="15" matBadgeColor="accent">home</mat-icon>
+            
+          </button>          
+          <button mat-raised-button matBadge="7" [matBadgeHidden]="hidden" routerLink="/dashboard">
+            Dashboard
+          </button>          
+          <button  mat-raised-button routerLink="/customers">Customers</button>
+          <button  mat-raised-button routerLink="/orders">Orders</button>
+          <button mat-raised-button matBadge="1"  matBadgeSize="small" routerLink="/reports">
+            Reports
+          </button>
+          <button  mat-raised-button routerLink="/Grid">Grid</button>
+          <button  mat-raised-button routerLink="/about">About</button>
+          <button  mat-raised-button routerLink="/contact">Contact</button>
+          <!-- <button mat-button routerLink="/edit">Edit</button> -->
+          <button mat-raised-button [matMenuTriggerFor]="menu">Navigate</button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/parent" routerLinkActive="active">Parent</button>
+            <button mat-menu-item routerLink="/sibling1" routerLinkActive="active">Sibling1</button>
+            <button mat-menu-item routerLink="/sibling2" routerLinkActive="active">Sibling2</button>
+            <button mat-menu-item routerLink="/dislocated1" routerLinkActive="active">Dislocated1</button>
+            <button mat-menu-item routerLink="/dislocated2" routerLinkActive="active">Dislocated2</button>
+            <button mat-menu-item (click)="openPopup()">Dynamic Popup</button>
+            <button mat-menu-item (click)="navigateToItemsList()">Items List</button>
+            <button mat-menu-item (click)="navigateToEmployeeList()">Employee List</button>
+            <button mat-menu-item (click)="navigateToEmployeeDetail()">Employee Detail</button>
+          </mat-menu>
         </nav>
      </mat-toolbar-row>
     </mat-toolbar>
-    <mat-toolbar color="primary">
-      <mat-toolbar-row>
-        <nav class="sub-navigation">
-          <a mat-button routerLink="/parent" routerLinkActive="active">Parent</a>
-          <a mat-button routerLink="/sibling1" routerLinkActive="active">Sibling1</a>
-          <a mat-button routerLink="/sibling2" routerLinkActive="active">Sibling2</a>
-          <a mat-button routerLink="/dislocated1" routerLinkActive="active">Dislocated1</a>
-          <a mat-button routerLink="/dislocated2" routerLinkActive="active">Dislocated2</a>
-          <a mat-button routerLink="/Grid" routerLinkActive="active">Grid</a>
-        </nav>
-     </mat-toolbar-row>
-    </mat-toolbar>
-    <h2 class="item-list-heading">Items List (using mockoon)</h2>
-      <app-item-list></app-item-list>
-    <div class="popup-button">
-      <h2 class="item-list-heading">Dynamic Popup</h2>
-      <div class="button-container">
-        <button mat-raised-button color="primary" class="center-button" (click)="openPopup()">Open Popup</button>
-      </div>
-    </div>
-    <!-- <h2 class="item-list-heading">Sending data using Service and event emitters</h2> -->
     <router-outlet></router-outlet>
-    <h2 class="item-list-heading">Sending data using Service and event emitters:</h2>
-    <main>
-      <div class="container">
-        
-        <employee-list></employee-list>
-        <employee-detail></employee-detail>
-      </div>
-    </main>
   </div>
 </div>
